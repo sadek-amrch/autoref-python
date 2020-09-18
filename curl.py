@@ -12,3 +12,4 @@ class curl:
 
     def filter(self):
         
+        return 0
