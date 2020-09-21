@@ -1,4 +1,3 @@
-google.com
-yahoo.com
-pornhub.com
-
+http://google.com
+http://yahoo.com
+http://pornhub.com
