@@ -1,4 +1,5 @@
 import requests
+import re
 
 class curl:
     def __init__(self, adress):
@@ -7,9 +8,10 @@ class curl:
 
 
     def get(self):
-        req = requests.get(self.adress)
-        return req.text;
+        req: str = requests.get(self.adress)
+        return req.text
 
     def filter(self):
-        
-        return 0
+        titleReg: str = '(?<=<title>)(.*)(?=</title>)'
+        title: str = re.search(titleReg, self.get())
+        return title
