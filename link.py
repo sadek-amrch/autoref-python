@@ -1,13 +1,15 @@
 from datetime import datetime
+from urllib.parse import urlparse
 
 class Link:
-    def __init__(self, link, domaine, title):
+    def __init__(self, link, title):
         self.link = link
-        self.domaine = domaine
+        self.domaine = ""
         self.title = title
 
     def PrintLink(self):
         now = datetime.now()
-        current_date = now.strftime("%d-%m-%Y")
+        self.domaine = urlparse(self.link).netloc
+        current_date = now.strftime("%d.%m.%Y")
         print(self.title + ", " + self.domaine + ", consuté le " + current_date + ", disponible à l'adresse suivante : " + self.link)
 
