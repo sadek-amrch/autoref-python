@@ -1,4 +1,5 @@
 from link import Link
+from curl import curl
 from FileManager import FileManager
 import sys
 
@@ -20,6 +21,12 @@ fm:FileManager = FileManager(file_link, 'out.txt')
 
 array_link = (fm.read_file())
 
+curl:curl = curl()
+
+title = curl.filter()
+
 for f in array_link:
-    link:Link = Link(f, "t")
+    curl.adress(f)
+    title = curl.filter()
+    link:Link = Link(f, title)
     link.PrintLink()
