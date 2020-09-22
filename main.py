@@ -23,10 +23,8 @@ array_link = (fm.read_file())
 
 curl:curl = curl()
 
-title = curl.filter()
 
 for f in array_link:
-    curl.adress(f)
-    title = curl.filter()
+    title = curl.filter(f)
     link:Link = Link(f, title)
     link.PrintLink()
