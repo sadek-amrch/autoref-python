@@ -13,4 +13,5 @@ class curl:
     def filter(self, adress):
         titleReg: str = '(?<=<title>)(.*)(?=</title>)'
         title: str = re.search(titleReg, self.get(adress))
-        return title
+
+        return title.group(0)
