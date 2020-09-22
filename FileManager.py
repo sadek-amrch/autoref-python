@@ -10,3 +10,9 @@ class FileManager:
             self.links_list = f.readlines()
             self.links_list = [x.strip() for x in self.links_list]
             return self.links_list
+<<<<<<< HEAD
+
+    def write_line(self, link):
+
+=======
+>>>>>>> fdbe80eaf92c13bf50f8be643ed146a4f0445df7
