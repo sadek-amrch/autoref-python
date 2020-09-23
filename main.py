@@ -26,5 +26,10 @@ curl: curl = curl()
 
 for f in array_link:
     title: curl = curl.filter(f)
-    link: Link = Link(f, title)
-    link.PrintLink()
+    if (title != 0):
+        link: Link = Link(f, title)
+        link.PrintLink()
+    else:
+        break
+
+
