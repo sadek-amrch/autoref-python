@@ -6,7 +6,7 @@ class curl:
         self.timeout: int = 3000
 
 
-    def get(self, adress):
+    def get(self, adress: str):
         req: str = requests.get(adress)
         return req.text
 

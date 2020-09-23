@@ -15,16 +15,16 @@ print("""
                                       """)
 
 print("***********************Autoref by Sadek, Adamo, Ismael**********************************")
-file_link = input("Merci d'entrer le nom du fichier : ")
+file_link: str = input("Merci d'entrer le nom du fichier : ")
 
-fm:FileManager = FileManager(file_link, 'out.txt')
+fm: FileManager = FileManager(file_link, 'out.txt')
 
-array_link = (fm.read_file())
+array_link: list = (fm.read_file())
 
-curl:curl = curl()
+curl: curl = curl()
 
 
 for f in array_link:
-    title = curl.filter(f)
-    link:Link = Link(f, title)
+    title: curl = curl.filter(f)
+    link: Link = Link(f, title)
     link.PrintLink()
