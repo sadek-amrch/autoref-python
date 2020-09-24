@@ -41,6 +41,9 @@ print('...')
 time.sleep(0.2)
 print("...\n\n")
 
+"""
+- Parcours le fichier (va être amélioré) 
+"""
 for line in array_link:
     title = curl.filter(line)
     count_all += 1
@@ -50,7 +53,6 @@ for line in array_link:
         count_success += 1
     else:
         count_fail += 1
-        break
 
 procent_success: float = (count_success / count_all) * 100
 

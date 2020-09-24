@@ -10,6 +10,7 @@ class curl:
             return 0
 
         if (req.status_code == 200):
+            req.elapsed.total_seconds()
             return req.text
         else:
             return 0;
@@ -17,7 +18,7 @@ class curl:
     def filter(self, adress):
         titleReg: str = '<title[^>]*>([^<]*)<\/title>'
         try:
-            title: str = re.search(titleReg, self.get(adress))
+            title = re.search(titleReg, self.get(adress))
         except:
             return 0
 
