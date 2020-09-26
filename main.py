@@ -45,7 +45,7 @@ print("...\n\n")
 - Parcours le fichier (va être amélioré) 
 """
 for line in array_link:
-    title = curl.filter(line)
+    title = curl.filterTitle(line)
     count_all += 1
     if (title != 0):
         link: Link = Link(line, title)
