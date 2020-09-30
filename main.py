@@ -3,7 +3,8 @@ from curl import curl
 from FileManager import FileManager
 import time
 
-array_link = None
+array_link = [None]
+array_failed = [None]
 file_ok: bool = False
 curl: curl = curl()
 count_success: int = 0
@@ -53,6 +54,7 @@ for line in array_link:
         count_success += 1
     else:
         count_fail += 1
+        array_failed.append(line)
 
 procent_success: float = (count_success / count_all) * 100
 
@@ -61,6 +63,10 @@ print("\n\nNombre de lien(s) traité(s) avec succès : {0} - Nombre de requêtes
              count_fail,
              count_all,
              procent_success))
+
+print("\n\nElement(s) n'ayant pas fonctionnés : ")
+for element in array_failed:
+    print(element)
 
 
 
